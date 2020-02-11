@@ -43,24 +43,13 @@ var config = {
 			position: "top_left"
 		},
 		{
-			module: "calendar",
-			header: "T+L",
-			position: "top_left",
-			config: {
-				calendars: [
-					{
-						symbol: "calendar-check",
-						url: "https://calendar.google.com/calendar/ical/t7u589kkqagjnj4qvahpek1hp8%40group.calendar.google.com/private-7661664fd456c796f08324e26f4fef6a/basic.ics"					}				]
-			}
-		},
-		{
 			module: 'MMM-vvsDeparture',
 			position: 'top_left',
 			config: {
 					station_id: "de:08118:1910",
-					station_name: "Ellental",
-					offset: "10"
-			}
+					offset: 10,
+					direction: "Bietigheim-Bissingen"
+				}
 		},
 		{
 		  module: "MMM-NowPlayingOnSpotify",
@@ -96,6 +85,17 @@ var config = {
 				appid: "6d75350101614c87751d5c6e4ad91c03",
 				maxNumberOfDays: 5,
 				lang: "de"
+			}
+		},
+		{
+			module: "calendar",
+			header: "T+L",
+			position: "top_right",
+			config: {
+				calendars: [
+					{
+						symbol: "calendar-check",
+						url: "https://calendar.google.com/calendar/ical/t7u589kkqagjnj4qvahpek1hp8%40group.calendar.google.com/private-7661664fd456c796f08324e26f4fef6a/basic.ics"					}				]
 			}
 		},
 		{
