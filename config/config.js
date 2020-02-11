@@ -57,10 +57,21 @@ var config = {
 			module: 'MMM-vvsDeparture',
 			position: 'top_left',
 			config: {
-					station_id: 'de:08118:1910',
+					station_id: "de:08118:1910",
 					station_name: "Ellental",
 					offset: "10"
 			}
+		},
+		{
+		  module: "MMM-NowPlayingOnSpotify",
+		  position: "top_left",
+		  config: {
+			showCoverArt: false,
+			clientID: "b097fd723cc44e65beda9cdf30f77e63",
+			clientSecret: "852264fae3024b74ab8c5dc19a1742d2",
+			accessToken: "BQB_e6mdTc2kMmfJAw-7FbSz1pDMaSn0KN-jwLlHecFOGXvOKBoESLA1zHo4Cbwpd_0EJAMwgvY7Opq-ExkiznJmy4eu-sDh7aIfGMIAqqy1W-ly5p6saWuUdt2_oD44d3NIwnFj4MCSLerQJi8bWi7arQ",
+			refreshToken: "AQBNsVFuKHweL98zf7Biai8ThMpKsFq0mRUCyerXCJJfNRxWkSeOMZguZc7IG5aRHwFPTj6Qhbtyf74kGqk2RnfN-ZaUoFVDZWKPFPUI2seZ_4qqOhX7kXMdkXsvCzxfmgQ"
+		  }
 		},
 		{
 			module: "compliments",
