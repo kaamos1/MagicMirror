@@ -43,13 +43,23 @@ var config = {
 			position: "top_left"
 		},
 		{
-			module: 'MMM-vvsDeparture',
-			position: 'top_left',
+			module: "calendar",
+			header: "T+L",
+			position: "top_left",
+			config: {
+				calendars: [
+					{
+						symbol: "calendar-check",
+						url: "https://calendar.google.com/calendar/ical/t7u589kkqagjnj4qvahpek1hp8%40group.calendar.google.com/private-7661664fd456c796f08324e26f4fef6a/basic.ics"					}				]
+			}
+		},
+		{
+			module: 'MMM-vvsDeparture',			position: 'top_left',
 			config: {
 					station_id: "de:08118:1910",
-					offset: 10,
-					direction: "Bietigheim-Bissingen"
-				}
+					station_name: "Ellental",
+					offset: "10"
+			}
 		},
 		{
 		  module: "MMM-NowPlayingOnSpotify",
@@ -88,17 +98,6 @@ var config = {
 			}
 		},
 		{
-			module: "calendar",
-			header: "T+L",
-			position: "top_right",
-			config: {
-				calendars: [
-					{
-						symbol: "calendar-check",
-						url: "https://calendar.google.com/calendar/ical/t7u589kkqagjnj4qvahpek1hp8%40group.calendar.google.com/private-7661664fd456c796f08324e26f4fef6a/basic.ics"					}				]
-			}
-		},
-		{
 			module: "newsfeed",
 			position: "bottom_bar",
 			config: {
@@ -113,26 +112,6 @@ var config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
-		},
-		{
-			module: 'MMM-OnScreenMenu',
-			position: 'bottom_right',
-		},
-		{
-			module: 'MMM-AlexaOnOff',
-			config: {
-				devices: [{
-					name: "Magic Mirror",
-					on: {
-						notification: "ONSCREENMENU_PROCESS_ACTION",
-						payload: { actionName:'monitorOn' }
-					},
-					off: {
-						notification: "ONSCREENMENU_PROCESS_ACTION",
-						payload: { actionName:'monitorOff'}
-						},
-					}]
-				}
 		},
 	]
 
