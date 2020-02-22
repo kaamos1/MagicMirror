@@ -64,7 +64,12 @@ Temporary Items
 !/modules/default
 !/modules/default/**
 !/modules/README.md**
-
+#!/modules/MMM-AlexaControl
+#!/modules/MMM-AlexaControl/**
+#!/modules/MMM-vvsDeparture
+#!/modules/MMM-vvsDeparture/**
+#!/modules/MMM-NowPlayingOnSpotify
+#!/modules/MMM-NowPlayingOnSpotify/**
 # Ignore changes to the custom css files.
 /css/custom.css
 
