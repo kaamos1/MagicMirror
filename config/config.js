@@ -47,13 +47,25 @@ var config = {
 			position: 'top_left',
 			config: {
 					station_id: "de:08118:1910",
-					offset: 10,
-					direction: "Bietigheim-Bissingen"
+					offset: 8,
+//					direction: "Bietigheim-Bissingen"
+					direction: ["Stuttgart Hauptbahnhof (oben)", "Bietigheim-Bissingen"]
+				}
+		},
+		{
+			module: 'MMM-AlexaControl',
+			position: 'bottom_right',
+			config: {
+				image: true,
+				height: 100,
+				width: 100,
+				pm2ProcessName: "mm",
+				vcgencmd: true
 				}
 		},
 		{
 		  module: "MMM-NowPlayingOnSpotify",
-		  position: "top_left",
+		  position: "bottom_right",
 		  config: {
 			showCoverArt: false,
 			clientID: "b097fd723cc44e65beda9cdf30f77e63",
@@ -62,10 +74,10 @@ var config = {
 			refreshToken: "AQBNsVFuKHweL98zf7Biai8ThMpKsFq0mRUCyerXCJJfNRxWkSeOMZguZc7IG5aRHwFPTj6Qhbtyf74kGqk2RnfN-ZaUoFVDZWKPFPUI2seZ_4qqOhX7kXMdkXsvCzxfmgQ"
 		  }
 		},
-		{
-			module: "compliments",
-			position: "lower_third"
-		},
+//		{
+//			module: "compliments",
+//			position: "lower_third"
+//		},
 		{
 			module: "currentweather",
 			position: "top_right",
@@ -90,7 +102,7 @@ var config = {
 		{
 			module: "calendar",
 			header: "T+L",
-			position: "top_right",
+			position: "bottom_left",
 			config: {
 				calendars: [
 					{
@@ -113,18 +125,7 @@ var config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
-		},
-		{
-			module: 'MMM-AlexaControl',
-			position: 'bottom_left',
-			config: {
-				image: true,
-				height: 100,
-				width: 100,
-				pm2ProcessName: "mm",
-				vcgencmd: true
-				}
-		},
+		}
 	]
 
 };
