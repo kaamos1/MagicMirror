@@ -31,12 +31,20 @@ var config = {
 			     // true, force serveronly mode, because you want to.. no UI on this device
 	
 	modules: [
+//		{
+//			module: "alert",
+//		},
+//		{
+//			module: "updatenotification",
+//			position: "top_bar"
+//		},
 		{
-			module: "alert",
-		},
-		{
-			module: "updatenotification",
-			position: "top_bar"
+			module: 'MMM-pages',
+			config: {
+				modules:
+					[[],[ "MMM-vvsDeparture", "MMM-NowPlayingOnSpotify", "weatherforecast", "calendar", "newsfeed"]],
+					fixed: ["clock", "currentweather", "MMM-AlexaControl", "MMM-page-indicator"],
+				}
 		},
 		{
 			module: "clock",
@@ -51,28 +59,6 @@ var config = {
 //					direction: "Bietigheim-Bissingen"
 					direction: ["Stuttgart Hauptbahnhof (oben)", "Bietigheim-Bissingen"]
 				}
-		},
-		{
-			module: 'MMM-AlexaControl',
-			position: 'bottom_right',
-			config: {
-				image: true,
-				height: 100,
-				width: 100,
-				pm2ProcessName: "mm",
-				vcgencmd: true
-				}
-		},
-		{
-		  module: "MMM-NowPlayingOnSpotify",
-		  position: "bottom_right",
-		  config: {
-			showCoverArt: false,
-			clientID: "b097fd723cc44e65beda9cdf30f77e63",
-			clientSecret: "852264fae3024b74ab8c5dc19a1742d2",
-			accessToken: "BQB_e6mdTc2kMmfJAw-7FbSz1pDMaSn0KN-jwLlHecFOGXvOKBoESLA1zHo4Cbwpd_0EJAMwgvY7Opq-ExkiznJmy4eu-sDh7aIfGMIAqqy1W-ly5p6saWuUdt2_oD44d3NIwnFj4MCSLerQJi8bWi7arQ",
-			refreshToken: "AQBNsVFuKHweL98zf7Biai8ThMpKsFq0mRUCyerXCJJfNRxWkSeOMZguZc7IG5aRHwFPTj6Qhbtyf74kGqk2RnfN-ZaUoFVDZWKPFPUI2seZ_4qqOhX7kXMdkXsvCzxfmgQ"
-		  }
 		},
 //		{
 //			module: "compliments",
@@ -111,6 +97,29 @@ var config = {
 			}
 		},
 		{
+		  module: "MMM-NowPlayingOnSpotify",
+		  position: "bottom_right",
+		  config: {
+			showCoverArt: false,
+			clientID: "b097fd723cc44e65beda9cdf30f77e63",
+			clientSecret: "852264fae3024b74ab8c5dc19a1742d2",
+			accessToken: "BQB_e6mdTc2kMmfJAw-7FbSz1pDMaSn0KN-jwLlHecFOGXvOKBoESLA1zHo4Cbwpd_0EJAMwgvY7Opq-ExkiznJmy4eu-sDh7aIfGMIAqqy1W-ly5p6saWuUdt2_oD44d3NIwnFj4MCSLerQJi8bWi7arQ",
+			refreshToken: "AQBNsVFuKHweL98zf7Biai8ThMpKsFq0mRUCyerXCJJfNRxWkSeOMZguZc7IG5aRHwFPTj6Qhbtyf74kGqk2RnfN-ZaUoFVDZWKPFPUI2seZ_4qqOhX7kXMdkXsvCzxfmgQ"
+		  }
+		},
+		{
+			module: 'MMM-AlexaControl',
+			position: 'bottom_right',
+			config: {
+				image: true,
+				height: 100,
+				width: 100,
+				pm2ProcessName: "mm",
+				vcgencmd: true,
+				pages: 2,
+				}
+		},
+		{
 			module: "newsfeed",
 			position: "bottom_bar",
 			config: {
@@ -125,6 +134,13 @@ var config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
+		},
+		{
+			module: "MMM-page-indicator",
+			position: "bottom_bar",
+			config: {
+					pages: 2,
+				}
 		}
 	]
 
