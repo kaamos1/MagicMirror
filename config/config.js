@@ -115,23 +115,14 @@ var config = {
 			}
 		},
 		{
-			module: 'MMM-OnScreenMenu',
-			position: 'bottom_right',
-		},
-		{
-			module: 'MMM-AlexaOnOff',
+			module: 'MMM-AlexaControl',
+			position: 'bottom_left',
 			config: {
-				devices: [{
-					name: "Magic Mirror",
-					on: {
-						notification: "ONSCREENMENU_PROCESS_ACTION",
-						payload: { actionName:'monitorOn' }
-					},
-					off: {
-						notification: "ONSCREENMENU_PROCESS_ACTION",
-						payload: { actionName:'monitorOff'}
-						},
-					}]
+				image: true,
+				height: 100,
+				width: 100,
+				pm2ProcessName: "mm",
+				vcgencmd: true
 				}
 		},
 	]
