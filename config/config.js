@@ -31,19 +31,21 @@ var config = {
 			     // true, force serveronly mode, because you want to.. no UI on this device
 	
 	modules: [
-//		{
-//			module: "alert",
-//		},
-//		{
-//			module: "updatenotification",
-//			position: "top_bar"
-//		},
+		{
+			module: "alert",
+		},
+		{
+			module: "updatenotification",
+			position: "top_bar"
+		},
 		{
 			module: 'MMM-pages',
 			config: {
 				modules:
-					[[],[ "MMM-vvsDeparture", "MMM-NowPlayingOnSpotify", "weatherforecast", "calendar", "newsfeed"]],
-					fixed: ["clock", "currentweather", "MMM-AlexaControl", "MMM-page-indicator"],
+					[[],
+					[ "MMM-vvsDeparture", "MMM-NowPlayingOnSpotify", "weatherforecast", "newsfeed", "MMM-WiFiPassword"],
+					["MMM-vvsDeparture", "weatherforecast", "MMM-Strava", "calendar"]],
+				fixed: ["alert", "updatenotification", "clock", "currentweather", "MMM-AlexaControl", "MMM-page-indicator"],
 				}
 		},
 		{
@@ -56,7 +58,6 @@ var config = {
 			config: {
 					station_id: "de:08118:1910",
 					offset: 8,
-//					direction: "Bietigheim-Bissingen"
 					direction: ["Stuttgart Hauptbahnhof (oben)", "Bietigheim-Bissingen"]
 				}
 		},
@@ -86,6 +87,19 @@ var config = {
 			}
 		},
 		{
+			module: "MMM-Strava",
+			position: "top_right",
+			config: {
+				client_id: "43962",
+				client_secret: "401c47bea67251d32f2f53d8a6136cb817f948af",
+				activities: ["run"],
+				mode: "chart", // chart or table
+//				chartType: "bar", //bar or radial
+//				auto_rotate: "true", //only in table mode
+//				updateInterval: 5000, //only for auto_rotate
+			}
+		},
+		{
 			module: "calendar",
 			header: "T+L",
 			position: "bottom_left",
@@ -94,6 +108,14 @@ var config = {
 					{
 						symbol: "calendar-check",
 						url: "https://calendar.google.com/calendar/ical/t7u589kkqagjnj4qvahpek1hp8%40group.calendar.google.com/private-7661664fd456c796f08324e26f4fef6a/basic.ics"					}				]
+			}
+		},
+		{
+			module: "MMM-WiFiPassword",
+			position: "bottom_left",
+			config: {
+				network: "UPC3D7E5AE",
+				password: "b7np6khsAcup",
 			}
 		},
 		{
@@ -116,7 +138,7 @@ var config = {
 				width: 100,
 				pm2ProcessName: "mm",
 				vcgencmd: true,
-				pages: 2,
+				pages: 3,
 				}
 		},
 		{
@@ -139,7 +161,7 @@ var config = {
 			module: "MMM-page-indicator",
 			position: "bottom_bar",
 			config: {
-					pages: 2,
+					pages: 3,
 				}
 		}
 	]
