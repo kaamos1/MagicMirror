@@ -39,13 +39,18 @@ var config = {
 			position: "top_bar"
 		},
 		{
+			module: "MMM-BurnIn",
+			position: "top_bar",
+			config: { updateInterval: 15},
+		},
+		{
 			module: 'MMM-pages',
 			config: {
 				modules:
 					[[],
-					[ "MMM-vvsDeparture", "MMM-NowPlayingOnSpotify", "weatherforecast", "newsfeed", "MMM-WiFiPassword"],
-					["MMM-vvsDeparture", "weatherforecast", "MMM-Strava", "calendar"]],
-				fixed: ["alert", "updatenotification", "clock", "currentweather", "MMM-AlexaControl", "MMM-page-indicator"],
+					[ "MMM-vvsDeparture", "MMM-NowPlayingOnSpotify", "weatherforecast", "newsfeed", "MMM-WiFiPassword", "MMM-NameDay"],
+					["MMM-vvsDeparture", "weatherforecast", "MMM-Strava", "calendar", "compliments"]],
+				fixed: ["alert", "updatenotification", "clock", "currentweather", "MMM-AlexaControl", "MMM-page-indicator", "MMM-BurnIn", "MMM-COVID19"],
 				}
 		},
 		{
@@ -61,10 +66,16 @@ var config = {
 					direction: ["Stuttgart Hauptbahnhof (oben)", "Bietigheim-Bissingen"]
 				}
 		},
-//		{
-//			module: "compliments",
-//			position: "lower_third"
-//		},
+		{
+			module: "MMM-COVID19",
+			position: "top_left",
+			config: {
+					updateInterval: 300000,
+					countries: ["Germany", "Italy", "Spain", "Netherlands", "Belgium", "Austria", "Poland", "USA", "China"],
+					headerRowClass: 'small',
+					rapidapiKey: "03703786efmsh194c97187232f93p1df044jsn34256b206038"
+				}
+		},
 		{
 			module: "currentweather",
 			position: "top_right",
@@ -139,6 +150,8 @@ var config = {
 				pm2ProcessName: "mm",
 				vcgencmd: true,
 				pages: 3,
+				shutdown: true,
+				reboot: true,
 				}
 		},
 		{
@@ -156,6 +169,13 @@ var config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
+		},
+		{
+			module: "compliments",
+			position: "bottom_bar",
+			config: {
+				remoteFile: "https://raw.githubusercontent.com/michadenheijer/MagicMirrorCompliments/master/de.json",
+				}
 		},
 		{
 			module: "MMM-page-indicator",
