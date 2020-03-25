@@ -48,9 +48,9 @@ var config = {
 			config: {
 				modules:
 					[[],
-					[ "MMM-vvsDeparture", "MMM-NowPlayingOnSpotify", "weatherforecast", "newsfeed", "MMM-WiFiPassword", "MMM-NameDay"],
-					["MMM-vvsDeparture", "weatherforecast", "MMM-Strava", "calendar", "compliments"]],
-				fixed: ["alert", "updatenotification", "clock", "currentweather", "MMM-AlexaControl", "MMM-page-indicator", "MMM-BurnIn", "MMM-COVID19"],
+					[ "MMM-vvsDeparture", "MMM-NowPlayingOnSpotify", "weatherforecast", "newsfeed", "MMM-WiFiPassword", "MMM-COVID19"],
+					["MMM-vvsDeparture", "weatherforecast", "MMM-Strava", "calendar", "compliments", "MMM-CountEvents"]],
+				fixed: ["alert", "updatenotification", "clock", "currentweather", "MMM-AlexaControl", "MMM-page-indicator", "MMM-BurnIn"],
 				}
 		},
 		{
@@ -71,8 +71,11 @@ var config = {
 			position: "top_left",
 			config: {
 					updateInterval: 300000,
-					countries: ["Germany", "Italy", "Spain", "Netherlands", "Belgium", "Austria", "Poland", "USA", "China"],
-					headerRowClass: 'small',
+					countries: ["Germany", "Italy", "Spain", "Netherlands", "Austria", "USA", "China"],
+					worldStats: true,
+					headerRowClass: 'medium',
+					infoRowClass: 'small',
+					lastUpdateInfo: true,
 					rapidapiKey: "03703786efmsh194c97187232f93p1df044jsn34256b206038"
 				}
 		},
@@ -141,6 +144,19 @@ var config = {
 		  }
 		},
 		{
+			module: "MMM-CountEvents",
+			position: "bottom_right",
+			config: {
+				locale: "de-DE",
+				events: [
+					{title: "Corona-Quarantäne", targetTime: "2020-03-14", absolute: true, className: "special", unit: "days", output: "seit %RESULT% Tagen"},
+					{title: "Lisa Geburtstag", targetTime: "1996-03-07", yearlyRepeat: true, humanize: true, output: "%RESULT%"},
+					{title: "Jahrestag", targetTime: "2018-06-29", yearlyRepeat: true, humanize: true, output: "%RESULT%"},
+					{title: "Thomas Geburtstag", targetTime: "1990-12-23", yearlyRepeat: true, humanize: true, output: "%RESULT%"},
+					{title: "Silvester", targetTime: "2020-12-31", unit: "days", yearlyRepeat: true, output: "in %RESULT% Tagen"},
+			]}
+		},
+		{
 			module: 'MMM-AlexaControl',
 			position: 'bottom_right',
 			config: {
@@ -148,15 +164,16 @@ var config = {
 				height: 100,
 				width: 100,
 				pm2ProcessName: "mm",
-				vcgencmd: true,
 				pages: 3,
+				refresh: false,
+				stop: false,
 				shutdown: true,
 				reboot: true,
 				}
 		},
 		{
 			module: "newsfeed",
-			position: "bottom_bar",
+			position: "bottom_center",
 			config: {
 				feeds: [
 					{
@@ -172,8 +189,9 @@ var config = {
 		},
 		{
 			module: "compliments",
-			position: "bottom_bar",
+			position: "lower_third",
 			config: {
+				classes: "thin large bright",
 				remoteFile: "https://raw.githubusercontent.com/michadenheijer/MagicMirrorCompliments/master/de.json",
 				}
 		},
