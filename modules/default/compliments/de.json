@@ -1,0 +1,88 @@
+{
+        "anytime" : [
+                "Du siehst heute großartig aus!",
+                "Heute ist ein großartiger Tag!",
+                "Du machst den Unterschied!",
+                "Ein wunderschönes Lächeln für einen wunderschönen Tag",
+                "Schaust du noch immer in den Spiegel?",
+                "Der Spiegel sagt: 'Hallo!'",
+		"Ohne dich wäre die Welt ein ganzes Stück trister.",
+		"Du hast ein wundervolles Wesen",
+		"Ich bin froh dein Spiegel zu sein!",
+		"Ich bin kein Touchscreen."
+        ],
+        "morning" : [
+		"Guten Morgen, Sonnenschein :)",
+                "Deine Haare sehen gut aus heute!",
+		"Hast du gut geschlafen?",
+                "Beginne den Tag mit einem Lächeln",
+                "Das wird ein schöner Tag!",
+                "Ist der Tag nicht großartig?",
+                "Mach dich bereit für einen großartigen Tag!"
+        ],
+        "afternoon" : [
+                "Mache noch schnell deine Arbeit fertig ...",
+                "Nachmittag, nicht Morgen, nicht Mittag",
+                "Dieser Tag ist großartig",
+		"Was machst du heute noch?",
+		"Genieße deinen Feierabend!",
+                "Beinahe Abendessenszeit!"
+        ],
+        "evening" : [
+                "Guten Appetit",
+                "Yeah, Freizeit",
+                "Du machst den Unterschied",
+                "War das Essen gut?",
+		"Netflix & Chill?",
+		"Schon zu Hause? Hast du nichts mehr vor?"
+        ],
+	"day_sunny" : [
+		"So ein schöner Tag!",
+		"Die Sonne scheint; zeig mir dein Lächeln :)",
+		"Heute schon spazieren gewesen? Nutze die Sonnenstunden!",
+		"Immer einen kühlen Kopf bewahren."
+	],
+	"day_cloudy": [
+		"Bewölkt... so ein Mist.",
+		"Perfektes Wetter zum Joggen!",
+		"Lass dir vom Wetter die Stimmung nicht vermiesen =)"
+	],
+	"cloudy" : [
+		"Bewölkt... so ein Mist.",
+		"Hinter den Wolken scheint irgendwo die Sonne!",
+		"Optimistisch bleiben"
+	],
+	"cloudy_windy" : [
+		"Pass auf, dass du nicht wegfliegst!",
+		"Ganz schön windig..",
+		"Perfektes Wetter zum Kuscheln"
+	],
+	"showers" : [
+		"Wenn du rausgehst, denk an wetterfeste Kleidung!",
+		"Ein Schauer kann dir die Dusche ersparen ;-)"
+	],
+	"rain" : [
+		"Packt die Regenschirme aus!",
+		"Die Erde freut sich über den Regen...",
+		"Bei dem Wetter darf man auch mal drinnen bleiben."
+	],
+	"thunderstorm" : [
+		"Ganz schön ungemütlich da draußen!",
+		"Zeus ist sauer.",
+		"Sekunden zwischen Blitz und Donner zählen. Mal 333 ergibt ca. die Entfernung!"
+	],
+	"snow" : [
+		"Zeit für einen Schneemann!",
+		"Leise rieselt der Schnee ...",
+		"Zeit für eine heiße Tasse Tee :)"
+	],
+	"fog" : [
+		"Ganz schön diesig da draußen.",
+		"Wie Sie sehen, sehen Sie nichts."
+	],
+	"night_clear" : [
+		"Perfektes Wetter zum Sternebeobachten",
+		"Findest du den großen Wagen?",
+		"Es könnte sehr kalt werden heute Nacht!"
+	]
+}
