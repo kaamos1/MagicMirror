@@ -48,7 +48,7 @@ var config = {
 			config: {
 				modules:
 					[["MMM-NowPlayingOnSpotify", "MMM-WiFiPassword", "MMM-COVID19", "newsfeed"],
-					["MMM-Strava", "calendar", "compliments", "MMM-CountEvents"]],
+					["MMM-Strava", "calendar", "compliments", "MMM-CountEvents", "MMM-ip"]],
 				fixed: ["alert", "updatenotification", "MMM-BurnIn", "clock", "currentweather", "weatherforecast", "MMM-vvsDeparture", "MMM-AlexaControl", "MMM-page-indicator"],
 				}
 		},
@@ -163,6 +163,16 @@ var config = {
 				network: "UPC3D7E5AE",
 				password: "b7np6khsAcup",
 			}
+		},
+		{
+			module: "MMM-ip",
+			position: "bottom_center",
+			config: {
+				fontSize: 12,
+				showType: "wlan0",
+				showFamily: "IPv4",
+			}
+
 		},
 		{
 			module: "MMM-COVID19",
